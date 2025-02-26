@@ -422,8 +422,8 @@ def initialize_bot(bot, bot_id):
                 target = command[1]
                 port = int(command[2])
                 time = int(command[3])
-                if user_id not in allowed_admin_ids and time > 240:
-                    response = "Error: Time interval must be less than 240."
+                if user_id not in allowed_admin_ids and time > 120:
+                    response = "Error: Time interval must be less than 120."
                 else:
                     log_command(user_id, target, port, time, '/bgmi')
                     start_attack_reply(message, target, port, time, owner_name)
